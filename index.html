@@ -2,125 +2,745 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ── SEO & Open Graph ──────────────────────────────── -->
-  <title>Happy Teacher's Day 💗 | Team Vidyut</title>
-  <meta name="description" content="A little gratitude for the teachers who shape us — from Team Vidyut with love." />
-  <meta name="theme-color" content="#c0405a" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Happy Teacher's Day 💗" />
-  <meta property="og:description" content="A little gratitude for the teachers who shape us" />
-  <meta property="og:locale" content="en_IN" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Happy Teacher's Day 💗" />
-  <meta name="twitter:description" content="A little gratitude for the teachers who shape us — from Team Vidyut" />
-
-  <!-- ── Google Fonts ─────────────────────────────────── -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teacher's Day — From Team Vidyut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --paper: #faf5ec;
+      --paper-edge: #f0e5d3;
+      --ink: #4a3229;
+      --ink-soft: #8a6d5c;
+      --rose: #c98a8f;
+      --rose-deep: #a85c63;
+      --sage: #93a683;
+      --tape: #e7c9b8;
+    }
 
-  <link rel="stylesheet" href="style.css" />
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(201, 138, 143, 0.10), transparent 45%),
+        radial-gradient(circle at 85% 78%, rgba(147, 166, 131, 0.10), transparent 45%),
+        var(--paper);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 48px 16px 70px;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ---------- decorative doodle layer (monochrome, hand-drawn) ---------- */
+    .doodles {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .doodle {
+      position: absolute;
+      color: var(--ink-soft);
+      opacity: .16;
+    }
+
+    .doodle svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .doodle.rose {
+      color: var(--rose);
+    }
+
+    .doodle.sage {
+      color: var(--sage);
+    }
+
+    .d1 {
+      top: 6%;
+      left: 7%;
+      width: 34px;
+      height: 34px;
+      transform: rotate(-8deg);
+    }
+
+    .d2 {
+      top: 14%;
+      right: 9%;
+      width: 26px;
+      height: 26px;
+      transform: rotate(10deg);
+      opacity: .14;
+    }
+
+    .d3 {
+      top: 34%;
+      left: 4%;
+      width: 22px;
+      height: 22px;
+      transform: rotate(-4deg);
+    }
+
+    .d4 {
+      top: 46%;
+      right: 5%;
+      width: 30px;
+      height: 30px;
+      transform: rotate(6deg);
+    }
+
+    .d5 {
+      top: 62%;
+      left: 9%;
+      width: 28px;
+      height: 28px;
+      transform: rotate(-12deg);
+    }
+
+    .d6 {
+      top: 72%;
+      right: 11%;
+      width: 24px;
+      height: 24px;
+      transform: rotate(8deg);
+    }
+
+    .d7 {
+      top: 85%;
+      left: 14%;
+      width: 20px;
+      height: 20px;
+      transform: rotate(4deg);
+    }
+
+    .d8 {
+      top: 88%;
+      right: 16%;
+      width: 32px;
+      height: 32px;
+      transform: rotate(-6deg);
+    }
+
+    .d9 {
+      top: 4%;
+      left: 42%;
+      width: 18px;
+      height: 18px;
+      transform: rotate(14deg);
+    }
+
+    .d10 {
+      top: 52%;
+      left: 46%;
+      width: 16px;
+      height: 16px;
+      transform: rotate(-10deg);
+      opacity: .10;
+    }
+
+    .d11 {
+      top: 24%;
+      left: 20%;
+      width: 16px;
+      height: 16px;
+      transform: rotate(20deg);
+      opacity: .12;
+    }
+
+    .d12 {
+      top: 78%;
+      right: 38%;
+      width: 18px;
+      height: 18px;
+      transform: rotate(-16deg);
+      opacity: .12;
+    }
+
+    @media (max-width:520px) {
+      .doodles {
+        opacity: .85;
+      }
+    }
+
+    .scene {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hint {
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      color: var(--ink-soft);
+      margin-bottom: 22px;
+      text-align: center;
+      transition: opacity 0.4s ease;
+    }
+
+    .hint svg {
+      display: block;
+      margin: 6px auto 0;
+      animation: bob 2.2s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    .stage {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ---------- ENVELOPE ---------- */
+    .envelope-view {
+      position: relative;
+      width: 280px;
+      height: 186px;
+      cursor: pointer;
+      transition: opacity .6s ease, transform .6s ease;
+      filter: drop-shadow(0 10px 20px rgba(90, 60, 45, 0.18));
+    }
+
+    .envelope-body {
+      position: absolute;
+      inset: 0;
+      background: #fffaf2;
+      border: 1px solid var(--paper-edge);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .envelope-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201, 138, 143, 0.10), rgba(147, 166, 131, 0.06));
+    }
+
+    .flap-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      border-left: 140px solid transparent;
+      border-right: 140px solid transparent;
+      border-top: 110px solid #f3e6d8;
+      z-index: 1;
+    }
+
+    .pocket-left {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 88px solid #f6ede0;
+      border-right: 140px solid transparent;
+      z-index: 2;
+    }
+
+    .pocket-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 88px solid #f6ede0;
+      border-left: 140px solid transparent;
+      z-index: 2;
+    }
+
+    .flap-front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      border-left: 140px solid transparent;
+      border-right: 140px solid transparent;
+      border-top: 92px solid #fdf6ea;
+      transform-origin: top center;
+      transform: rotateX(0deg);
+      transition: transform .8s cubic-bezier(.6, .05, .28, 1);
+      z-index: 5;
+      filter: drop-shadow(0 3px 4px rgba(90, 60, 45, 0.10));
+    }
+
+    .wax {
+      position: absolute;
+      top: 76px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #cf7a80, var(--rose-deep) 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 6;
+      box-shadow: 0 2px 4px rgba(90, 60, 45, 0.25);
+      transition: opacity .3s ease, transform .3s ease;
+    }
+
+    .wax svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .peek {
+      position: absolute;
+      left: 50%;
+      top: -14px;
+      transform: translate(-50%, 0);
+      width: 196px;
+      height: 40px;
+      background: var(--paper);
+      border: 1px solid var(--paper-edge);
+      border-radius: 3px 3px 0 0;
+      z-index: 3;
+      transition: opacity .3s ease;
+    }
+
+    .stage.open .envelope-view {
+      opacity: .3;
+      transform: scale(.92) translateY(8px);
+      pointer-events: none;
+    }
+
+    .stage.open .flap-front {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+
+    .stage.open .wax {
+      opacity: 0;
+      transform: translate(-50%, 0) scale(.6);
+    }
+
+    .stage.open .peek {
+      opacity: 0;
+    }
+
+    /* ---------- LETTER ---------- */
+    .letter-view {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 14px) scale(.9);
+      width: min(94vw, 400px);
+      max-height: min(76vh, 640px);
+      overflow-y: auto;
+      background: var(--paper);
+      border: 1px solid var(--paper-edge);
+      border-radius: 6px;
+      box-shadow: 0 18px 40px rgba(90, 60, 45, 0.20);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .55s ease .2s, transform .55s cubic-bezier(.34, 1.2, .4, 1) .2s;
+      z-index: 8;
+      scrollbar-width: thin;
+    }
+
+    .stage.open .letter-view {
+      opacity: 1;
+      transform: translate(-50%, 0) scale(1);
+      pointer-events: auto;
+    }
+
+    .letter-inner {
+      padding: 40px 34px 34px;
+      text-align: center;
+    }
+
+    .tape {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translate(-50%, 0) rotate(-3deg);
+      width: 80px;
+      height: 28px;
+      background: var(--tape);
+      opacity: .75;
+      box-shadow: 0 1px 2px rgba(90, 60, 45, 0.12);
+    }
+
+    .tape::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.35) 0 2px, transparent 2px 6px);
+    }
+
+    .eyebrow {
+      font-family: 'Caveat', cursive;
+      font-size: 1.25rem;
+      color: var(--rose-deep);
+      margin: 8px 0 4px;
+    }
+
+    .headline {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 3.6rem;
+      line-height: .95;
+      color: var(--ink);
+      margin: 6px 0 6px;
+    }
+
+    .headline span {
+      color: var(--rose-deep);
+    }
+
+    .from-line {
+      font-family: 'Caveat', cursive;
+      font-size: 1.55rem;
+      color: var(--sage);
+      margin: 0 0 20px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 16px 0 20px;
+    }
+
+    .divider .line {
+      height: 1px;
+      width: 50px;
+      background: linear-gradient(90deg, transparent, var(--tape));
+    }
+
+    .divider .line.right {
+      background: linear-gradient(90deg, var(--tape), transparent);
+    }
+
+    .divider svg {
+      width: 14px;
+      height: 14px;
+      color: var(--rose);
+    }
+
+    .message {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.12rem;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      margin: 0 0 6px;
+    }
+
+    .message strong {
+      color: var(--rose-deep);
+      font-weight: 600;
+    }
+
+    .signoff {
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      color: var(--ink-soft);
+      margin-top: 20px;
+      letter-spacing: .3px;
+    }
+
+    .flowers {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .flowers svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .close-hint {
+      margin-top: 30px;
+      font-family: 'Caveat', cursive;
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      opacity: .65;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .close-hint:hover {
+      opacity: 1;
+    }
+
+    /* reserve enough room in the stage so the open letter is never clipped */
+    .stage-spacer {
+      width: 1px;
+      visibility: hidden;
+      transition: height .3s ease;
+    }
+
+    .stage.open .stage-spacer {
+      height: min(76vh, 640px);
+    }
+
+    .stage:not(.open) .stage-spacer {
+      height: 186px;
+    }
+
+    @media (max-width:380px) {
+      .envelope-view {
+        width: 246px;
+        height: 164px;
+      }
+
+      .flap-back,
+      .flap-front {
+        border-left-width: 123px;
+        border-right-width: 123px;
+      }
+
+      .flap-back {
+        border-top-width: 97px;
+      }
+
+      .flap-front {
+        border-top-width: 81px;
+      }
+
+      .pocket-left,
+      .pocket-right {
+        border-bottom-width: 78px;
+      }
+
+      .pocket-left {
+        border-right-width: 123px;
+      }
+
+      .pocket-right {
+        border-left-width: 123px;
+      }
+
+      .wax {
+        top: 66px;
+      }
+
+      .peek {
+        width: 172px;
+      }
+
+      .headline {
+        font-size: 2.9rem;
+      }
+
+      .letter-inner {
+        padding: 32px 24px 28px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .flap-front,
+      .letter-view,
+      .envelope-view,
+      .wax,
+      .hint svg {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ── Fixed background ──────────────────────────────── -->
-  <div id="bg-layer" aria-hidden="true"></div>
+  <div class="doodles" aria-hidden="true">
+    <div class="doodle d1 rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0112 6.2 4.5 4.5 0 0120.5 9c0 6-8.5 11.5-8.5 11.5z" />
+      </svg></div>
+    <div class="doodle d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="9" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <circle cx="15" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <path d="M8.3 14.2c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
+      </svg></div>
+    <div class="doodle d3 sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0112 6.2 4.5 4.5 0 0120.5 9c0 6-8.5 11.5-8.5 11.5z" />
+      </svg></div>
+    <div class="doodle d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="9" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <circle cx="15" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <path d="M8.3 14.2c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
+      </svg></div>
+    <div class="doodle d5 rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0112 6.2 4.5 4.5 0 0120.5 9c0 6-8.5 11.5-8.5 11.5z" />
+      </svg></div>
+    <div class="doodle d6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M8.6 9.6l.6.6M14.8 9.6l.6.6" stroke-linecap="round" />
+        <path d="M8.3 14.2c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
+      </svg></div>
+    <div class="doodle d7 sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0112 6.2 4.5 4.5 0 0120.5 9c0 6-8.5 11.5-8.5 11.5z" />
+      </svg></div>
+    <div class="doodle d8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="9" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <circle cx="15" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <path d="M8.3 14.2c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
+      </svg></div>
+    <div class="doodle d9 rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0112 6.2 4.5 4.5 0 0120.5 9c0 6-8.5 11.5-8.5 11.5z" />
+      </svg></div>
+    <div class="doodle d10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="9" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <circle cx="15" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <path d="M8.3 14.2c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
+      </svg></div>
+    <div class="doodle d11 sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0112 6.2 4.5 4.5 0 0120.5 9c0 6-8.5 11.5-8.5 11.5z" />
+      </svg></div>
+    <div class="doodle d12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="9" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <circle cx="15" cy="10" r=".9" fill="currentColor" stroke="none" />
+        <path d="M8.3 14.2c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
+      </svg></div>
+  </div>
 
-  <!-- ── Floating petals (JS-injected SVG) ─────────────── -->
-  <div id="petal-canvas" aria-hidden="true"></div>
+  <div class="scene">
+    <div class="hint" id="hint">
+      tap the envelope
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M12 4v14M12 18l-5-5M12 18l5-5" />
+      </svg>
+    </div>
 
-  <!-- ── Confetti layer ────────────────────────────────── -->
-  <div id="confetti-container" aria-hidden="true"></div>
+    <div class="stage" id="stage">
+      <div class="stage-spacer"></div>
 
-  <!-- ── Floating hearts ───────────────────────────────── -->
-  <div id="hearts-container" aria-hidden="true"></div>
-
-  <!-- ── Main content ──────────────────────────────────── -->
-  <main>
-    <article class="card" role="main">
-
-      <!-- Top decorative hibiscus SVG row -->
-      <div class="card-deco-top" aria-hidden="true">
-        <!-- Hibiscus left -->
-        <svg width="36" height="36" viewBox="-18 -18 36 36" xmlns="http://www.w3.org/2000/svg">
-          <g opacity="0.75">
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(0)" />
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(72)" />
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(144)" />
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(216)" />
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(288)" />
-            <circle cx="0" cy="0" r="4.5" fill="#f0c86a" />
-          </g>
-        </svg>
-        <!-- Star / sparkle centre -->
-        <svg width="22" height="22" viewBox="-11 -11 22 22" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,-9 L2,-2 L9,0 L2,2 L0,9 L-2,2 L-9,0 L-2,-2 Z" fill="#d4a046" opacity="0.85" />
-        </svg>
-        <!-- Hibiscus right -->
-        <svg width="36" height="36" viewBox="-18 -18 36 36" xmlns="http://www.w3.org/2000/svg">
-          <g opacity="0.75">
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(0)" />
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(72)" />
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(144)" />
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(216)" />
-            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(288)" />
-            <circle cx="0" cy="0" r="4.5" fill="#f0c86a" />
-          </g>
-        </svg>
+      <div class="envelope-view" id="envelope">
+        <div class="peek"></div>
+        <div class="flap-back"></div>
+        <div class="pocket-left"></div>
+        <div class="pocket-right"></div>
+        <div class="envelope-body">
+          <div class="envelope-shade"></div>
+        </div>
+        <div class="flap-front"></div>
+        <div class="wax">
+          <svg viewBox="0 0 24 24" fill="#fdf0e6">
+            <path
+              d="M12 21s-7.5-4.6-10-9.1C.4 8.6 2 5 5.6 5 8 5 10 6.5 12 9c2-2.5 4-4 6.4-4C22 5 23.6 8.6 22 11.9 19.5 16.4 12 21 12 21z" />
+          </svg>
+        </div>
       </div>
 
-      <!-- Kicker -->
-      <p class="tagline">With Love &amp; Gratitude ✦ 2026</p>
+      <div class="letter-view" id="letter">
+        <div class="tape"></div>
+        <div class="letter-inner">
+          <div class="eyebrow">with love &amp; gratitude, 2026</div>
+          <div class="headline">Happy<br>Teacher's <span>Day</span></div>
+          <div class="from-line">from Team Vidyut</div>
 
-      <!-- Gratitude message -->
-      <p class="main-message">
-        Your support makes Vidyut what it is.<br />
-        Thank you for <em>believing in us</em>, standing with us,<br />
-        and helping us to <em>Be The Change.</em>
-      </p>
+          <div class="divider">
+            <span class="line"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 20.5S4 15 4 9.3A4.3 4.3 0 0112 6.7 4.3 4.3 0 0120 9.3c0 5.7-8 11.2-8 11.2z" />
+            </svg>
+            <span class="line right"></span>
+          </div>
 
-      <!-- Gold divider -->
-      <div class="divider" aria-hidden="true">
-        <span class="divider-line"></span>
-        <span class="divider-gem"></span>
-        <span class="divider-line right"></span>
+          <p class="message">
+            Your support makes Vidyut what it is.<br>
+            Thank you for <strong>believing in us</strong>, standing with us,
+            and helping us to <strong>Be The Change</strong>.
+          </p>
+
+          <div class="flowers">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c98a8f" stroke-width="1.4">
+              <circle cx="9" cy="10" r=".9" fill="currentColor" stroke="none" />
+              <circle cx="15" cy="10" r=".9" fill="currentColor" stroke="none" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M8.3 14.4c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a85c63" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0112 6.2 4.5 4.5 0 0120.5 9c0 6-8.5 11.5-8.5 11.5z" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#93a683" stroke-width="1.4">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M8.6 9.7l.7.7M14.7 9.7l.7.7" stroke-linecap="round" />
+              <path d="M8.3 14.4c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="signoff">— with all our hearts</div>
+          <div class="close-hint" id="close-hint">tuck it back in</div>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Pulsing big heart -->
-      <div class="heart-wrapper" title="Click me!">
-        <span class="big-heart" role="img" aria-label="Heart">❤️</span>
-      </div>
+  <script>
+    const stage = document.getElementById('stage');
+    const envelope = document.getElementById('envelope');
+    const hint = document.getElementById('hint');
+    const closeHint = document.getElementById('close-hint');
 
-      <!-- Main headline -->
-      <h1 class="headline">
-        Happy <span class="accent">Teacher's</span> Day
-      </h1>
+    function setOpen(open) {
+      stage.classList.toggle('open', open);
+      hint.style.opacity = open ? '0' : '1';
+      if (open) { setTimeout(() => { stage.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50); }
+    }
 
-      <!-- Sub-headline: script font -->
-      <h2 class="sub-headline">From Team Vidyut 🌺</h2>
+    envelope.addEventListener('click', () => setOpen(true));
+    closeHint.addEventListener('click', (e) => { e.stopPropagation(); setOpen(false); });
+  </script>
 
-      <!-- From line -->
-      <p class="from-text">— with all our hearts —</p>
-
-      <!-- CTA Button -->
-      <button id="btn-say-thanks" class="btn-thanks" type="button" aria-label="Send a burst of love">
-        Thank You 💗
-      </button>
-
-
-
-    </article>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
