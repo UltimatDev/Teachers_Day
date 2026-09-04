@@ -58,7 +58,7 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      padding: 48px 16px 70px;
+      padding: 76px 16px 70px;
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
@@ -952,7 +952,7 @@
 
     @media (max-width: 520px) {
       body {
-        padding: 30px 10px 50px;
+        padding: 56px 10px 50px;
       }
 
       .scene {
@@ -1117,6 +1117,69 @@
       }
     }
 
+    /* ---------- TOP HEADER LOGOS ---------- */
+    .header-logos {
+      position: absolute;
+      top: 22px;
+      left: 28px;
+      right: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      height: 48px;
+      width: auto;
+      max-width: 44vw;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      filter: drop-shadow(0 2px 6px rgba(90, 55, 40, 0.10));
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .logo-amrita {
+      height: 42px;
+    }
+
+    .logo-vidyut {
+      height: 46px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 520px) {
+      .header-logos {
+        top: 14px;
+        left: 14px;
+        right: 14px;
+      }
+
+      .logo-amrita {
+        height: 30px;
+      }
+
+      .logo-vidyut {
+        height: 34px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .header-logos {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+      }
+
+      .logo-amrita {
+        height: 24px;
+      }
+
+      .logo-vidyut {
+        height: 28px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
 
       .flap-front,
@@ -1132,6 +1195,12 @@
 </head>
 
 <body>
+
+  <!-- ── Top Header Logos ───────────────────────────────── -->
+  <header class="header-logos">
+    <img src="Amritpuri_Logo (2).png" alt="Amrita Vishwa Vidyapeetham Amritapuri Campus Logo" class="logo logo-amrita">
+    <img src="VIDYUT 2026 LOGO(1).png" alt="Vidyut 2026 National Level Multifest Logo" class="logo logo-vidyut">
+  </header>
 
   <!-- ── Animated watercolour blobs ─────────────────────── -->
   <div class="bg-blobs" aria-hidden="true">
@@ -1310,7 +1379,7 @@
       <div class="letter-view" id="letter">
         <div class="tape"></div>
         <div class="letter-inner">
-          <div class="eyebrow">with love &amp; gratitude, 2026</div>
+          <div class="eyebrow">with love &amp; gratitude, VIDYUT 2026</div>
           <div class="headline">Happy<br>Teacher's <span>Day</span></div>
           <div class="from-line">from Team Vidyut</div>
 
@@ -1327,28 +1396,28 @@
             <p>To our dearest teachers,</p>
 
             <p>
-              Today, we pause our usual chaos to say what we don’t say enough —
-              thank you. ❤️
+              Today, we pause our usual chaos to say what we don’t say enough -
+              <strong>Thank you.</strong> ❤️
             </p>
 
             <p>
               Thank you for your time, patience, effort, and for always giving us
-              another chance to get things right.
+              another chance.
             </p>
 
             <p>
               You don’t just teach us lessons; you shape us into better versions
-              of ourselves. We may be chaotic, but you continue to believe in us.
+              of ourselves.
             </p>
 
             <p>
               Years from now, we may forget the lessons and formulas, but we’ll
-              remember the people who believed in us.
+              remember the people who believed in us and made it all worth it.
             </p>
 
             <p>
-              One day, when the last bell rings, we’ll leave these classrooms behind,
-              but there will always be a piece of these days — and a piece of you —
+              One day, we’ll leave these classrooms behind,
+              but there will always be a piece of these days - and a piece of you -
               in our memories.
             </p>
 
@@ -1362,31 +1431,26 @@
 
             <p>
               With love, gratitude,<br>
-              and a little less chaos than usual,<br>
-              Your students
+              <br>
+              <strong>
+                Your students from Team Vidyut
+              </strong>
             </p>
           </div>
 
           <div class="flowers">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c98a8f" stroke-width="1.4">
-              <circle cx="9" cy="10" r=".9" fill="currentColor" stroke="none" />
-              <circle cx="15" cy="10" r=".9" fill="currentColor" stroke="none" />
-              <circle cx="12" cy="12" r="9" />
-              <path d="M8.3 14.4c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
             </svg>
             <svg viewBox="0 0 24 24" fill="none" stroke="#a85c63" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0112 6.2 4.5 4.5 0 0120.5 9c0 6-8.5 11.5-8.5 11.5z" />
             </svg>
             <svg viewBox="0 0 24 24" fill="none" stroke="#93a683" stroke-width="1.4">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M8.6 9.7l.7.7M14.7 9.7l.7.7" stroke-linecap="round" />
-              <path d="M8.3 14.4c1 1.4 2.3 2 3.7 2s2.7-.6 3.7-2" stroke-linecap="round" />
             </svg>
           </div>
 
           <div class="signoff">— with all our hearts</div>
-          <div class="close-hint" id="close-hint">tuck it back in</div>
+          <div class="close-hint" id="close-hint">Click to tuck it back in</div>
         </div>
       </div>
     </div>
