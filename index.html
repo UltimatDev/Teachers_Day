@@ -39,13 +39,11 @@
       /* Layered background: ruled paper lines + watercolour wash + base cream */
       background:
         /* ruled paper lines */
-        repeating-linear-gradient(
-          to bottom,
+        repeating-linear-gradient(to bottom,
           transparent 0px,
           transparent 27px,
           rgba(168, 92, 99, 0.045) 28px,
-          transparent 29px
-        ),
+          transparent 29px),
         /* watercolour blob – top-left rose */
         radial-gradient(ellipse 55% 42% at 8% 12%, rgba(201, 138, 143, 0.18), transparent 70%),
         /* watercolour blob – bottom-right sage */
@@ -73,11 +71,9 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background: radial-gradient(
-        ellipse 100% 100% at 50% 50%,
-        transparent 55%,
-        rgba(90, 55, 40, 0.07) 100%
-      );
+      background: radial-gradient(ellipse 100% 100% at 50% 50%,
+          transparent 55%,
+          rgba(90, 55, 40, 0.07) 100%);
     }
 
     /* ---------- animated watercolour blobs (CSS-only) ---------- */
@@ -98,48 +94,65 @@
     }
 
     .bg-blob-1 {
-      width: 420px; height: 340px;
-      top: -80px; left: -100px;
-      background: radial-gradient(circle, rgba(201,138,143,0.32), rgba(201,138,143,0.05));
+      width: 420px;
+      height: 340px;
+      top: -80px;
+      left: -100px;
+      background: radial-gradient(circle, rgba(201, 138, 143, 0.32), rgba(201, 138, 143, 0.05));
       animation-duration: 12s;
       animation-delay: 0s;
     }
 
     .bg-blob-2 {
-      width: 360px; height: 300px;
-      bottom: -60px; right: -80px;
-      background: radial-gradient(circle, rgba(147,166,131,0.28), rgba(147,166,131,0.04));
+      width: 360px;
+      height: 300px;
+      bottom: -60px;
+      right: -80px;
+      background: radial-gradient(circle, rgba(147, 166, 131, 0.28), rgba(147, 166, 131, 0.04));
       animation-duration: 15s;
       animation-delay: -4s;
     }
 
     .bg-blob-3 {
-      width: 280px; height: 240px;
-      top: 38%; left: -60px;
-      background: radial-gradient(circle, rgba(231,201,184,0.26), rgba(231,201,184,0.03));
+      width: 280px;
+      height: 240px;
+      top: 38%;
+      left: -60px;
+      background: radial-gradient(circle, rgba(231, 201, 184, 0.26), rgba(231, 201, 184, 0.03));
       animation-duration: 18s;
       animation-delay: -8s;
     }
 
     .bg-blob-4 {
-      width: 260px; height: 220px;
-      top: 25%; right: -50px;
-      background: radial-gradient(circle, rgba(201,138,143,0.22), rgba(201,138,143,0.03));
+      width: 260px;
+      height: 220px;
+      top: 25%;
+      right: -50px;
+      background: radial-gradient(circle, rgba(201, 138, 143, 0.22), rgba(201, 138, 143, 0.03));
       animation-duration: 14s;
       animation-delay: -2s;
     }
 
     .bg-blob-5 {
-      width: 200px; height: 180px;
-      top: 60%; left: 30%;
-      background: radial-gradient(circle, rgba(147,166,131,0.20), rgba(147,166,131,0.02));
+      width: 200px;
+      height: 180px;
+      top: 60%;
+      left: 30%;
+      background: radial-gradient(circle, rgba(147, 166, 131, 0.20), rgba(147, 166, 131, 0.02));
       animation-duration: 16s;
       animation-delay: -6s;
     }
 
     @keyframes blobBreath {
-      0%   { opacity: 0.25; transform: scale(0.88) translate(0px, 0px); }
-      100% { opacity: 0.55; transform: scale(1.16) translate(16px, -12px); }
+      0% {
+        opacity: 0.25;
+        transform: scale(0.88) translate(0px, 0px);
+      }
+
+      100% {
+        opacity: 0.55;
+        transform: scale(1.16) translate(16px, -12px);
+      }
     }
 
     /* ---------- floating background petals & hearts ---------- */
@@ -163,28 +176,100 @@
       height: 100%;
     }
 
-    .p1 { left: 7%;  width: 22px; height: 22px; animation-duration: 14s; animation-delay: 0s; }
-    .p2 { left: 21%; width: 18px; height: 18px; animation-duration: 18s; animation-delay: -4s; }
-    .p3 { left: 36%; width: 15px; height: 15px; animation-duration: 12s; animation-delay: -8s; }
-    .p4 { left: 52%; width: 20px; height: 20px; animation-duration: 16s; animation-delay: -2s; }
-    .p5 { left: 68%; width: 24px; height: 24px; animation-duration: 15s; animation-delay: -6s; }
-    .p6 { left: 82%; width: 16px; height: 16px; animation-duration: 20s; animation-delay: -10s; }
-    .p7 { left: 92%; width: 20px; height: 20px; animation-duration: 13s; animation-delay: -1s; }
-    .p8 { left: 45%; width: 18px; height: 18px; animation-duration: 17s; animation-delay: -12s; }
-    .p9 { left: 15%; width: 19px; height: 19px; animation-duration: 19s; animation-delay: -7s; }
-    .p10 { left: 76%; width: 21px; height: 21px; animation-duration: 13s; animation-delay: -3s; }
+    .p1 {
+      left: 7%;
+      width: 22px;
+      height: 22px;
+      animation-duration: 14s;
+      animation-delay: 0s;
+    }
+
+    .p2 {
+      left: 21%;
+      width: 18px;
+      height: 18px;
+      animation-duration: 18s;
+      animation-delay: -4s;
+    }
+
+    .p3 {
+      left: 36%;
+      width: 15px;
+      height: 15px;
+      animation-duration: 12s;
+      animation-delay: -8s;
+    }
+
+    .p4 {
+      left: 52%;
+      width: 20px;
+      height: 20px;
+      animation-duration: 16s;
+      animation-delay: -2s;
+    }
+
+    .p5 {
+      left: 68%;
+      width: 24px;
+      height: 24px;
+      animation-duration: 15s;
+      animation-delay: -6s;
+    }
+
+    .p6 {
+      left: 82%;
+      width: 16px;
+      height: 16px;
+      animation-duration: 20s;
+      animation-delay: -10s;
+    }
+
+    .p7 {
+      left: 92%;
+      width: 20px;
+      height: 20px;
+      animation-duration: 13s;
+      animation-delay: -1s;
+    }
+
+    .p8 {
+      left: 45%;
+      width: 18px;
+      height: 18px;
+      animation-duration: 17s;
+      animation-delay: -12s;
+    }
+
+    .p9 {
+      left: 15%;
+      width: 19px;
+      height: 19px;
+      animation-duration: 19s;
+      animation-delay: -7s;
+    }
+
+    .p10 {
+      left: 76%;
+      width: 21px;
+      height: 21px;
+      animation-duration: 13s;
+      animation-delay: -3s;
+    }
 
     @keyframes floatUpSway {
       0% {
         transform: translateY(0) rotate(0deg) translateX(0px);
         opacity: 0;
       }
+
       15% {
         opacity: 0.65;
       }
+
       85% {
         opacity: 0.65;
       }
+
       100% {
         transform: translateY(-115vh) rotate(360deg) translateX(40px);
         opacity: 0;
@@ -223,13 +308,23 @@
     }
 
     @keyframes cornerSwayTL {
-      0%   { transform: rotate(0deg) scale(1); }
-      100% { transform: rotate(3.5deg) scale(1.04); }
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+
+      100% {
+        transform: rotate(3.5deg) scale(1.04);
+      }
     }
 
     @keyframes cornerSwayBR {
-      0%   { transform: rotate(180deg) scale(1); }
-      100% { transform: rotate(183.5deg) scale(1.04); }
+      0% {
+        transform: rotate(180deg) scale(1);
+      }
+
+      100% {
+        transform: rotate(183.5deg) scale(1.04);
+      }
     }
 
     /* ---------- floating doodle animation ---------- */
@@ -248,23 +343,78 @@
       animation: doodleFloat 6s ease-in-out infinite alternate;
     }
 
-    .d1  { animation-duration: 5.2s; animation-delay: 0s; }
-    .d2  { animation-duration: 6.8s; animation-delay: -1.2s; }
-    .d3  { animation-duration: 5.8s; animation-delay: -2.5s; }
-    .d4  { animation-duration: 7.4s; animation-delay: -3.8s; }
-    .d5  { animation-duration: 6.1s; animation-delay: -0.6s; }
-    .d6  { animation-duration: 5.5s; animation-delay: -4.2s; }
-    .d7  { animation-duration: 7.0s; animation-delay: -1.9s; }
-    .d8  { animation-duration: 6.4s; animation-delay: -3.1s; }
-    .d9  { animation-duration: 5.9s; animation-delay: -0.3s; }
-    .d10 { animation-duration: 7.2s; animation-delay: -2.2s; }
-    .d11 { animation-duration: 6.6s; animation-delay: -4.5s; }
-    .d12 { animation-duration: 5.4s; animation-delay: -1.7s; }
+    .d1 {
+      animation-duration: 5.2s;
+      animation-delay: 0s;
+    }
+
+    .d2 {
+      animation-duration: 6.8s;
+      animation-delay: -1.2s;
+    }
+
+    .d3 {
+      animation-duration: 5.8s;
+      animation-delay: -2.5s;
+    }
+
+    .d4 {
+      animation-duration: 7.4s;
+      animation-delay: -3.8s;
+    }
+
+    .d5 {
+      animation-duration: 6.1s;
+      animation-delay: -0.6s;
+    }
+
+    .d6 {
+      animation-duration: 5.5s;
+      animation-delay: -4.2s;
+    }
+
+    .d7 {
+      animation-duration: 7.0s;
+      animation-delay: -1.9s;
+    }
+
+    .d8 {
+      animation-duration: 6.4s;
+      animation-delay: -3.1s;
+    }
+
+    .d9 {
+      animation-duration: 5.9s;
+      animation-delay: -0.3s;
+    }
+
+    .d10 {
+      animation-duration: 7.2s;
+      animation-delay: -2.2s;
+    }
+
+    .d11 {
+      animation-duration: 6.6s;
+      animation-delay: -4.5s;
+    }
+
+    .d12 {
+      animation-duration: 5.4s;
+      animation-delay: -1.7s;
+    }
 
     @keyframes doodleFloat {
-      0%   { transform: translateY(0px) rotate(0deg); }
-      50%  { transform: translateY(-7px) rotate(4deg); }
-      100% { transform: translateY(5px) rotate(-3deg); }
+      0% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-7px) rotate(4deg);
+      }
+
+      100% {
+        transform: translateY(5px) rotate(-3deg);
+      }
     }
 
     /* ---------- decorative doodle layer (monochrome, hand-drawn) ---------- */
@@ -541,10 +691,13 @@
     }
 
     @keyframes waxPulse {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translate(-50%, 0) scale(1);
         box-shadow: 0 2px 8px rgba(168, 92, 99, 0.4);
       }
+
       50% {
         transform: translate(-50%, -3px) scale(1.15);
         box-shadow: 0 6px 18px rgba(168, 92, 99, 0.7);
@@ -558,8 +711,15 @@
     }
 
     @keyframes heartPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
     }
 
     .peek {
@@ -602,9 +762,17 @@
       top: 0;
       left: 50%;
       transform: translate(-50%, 14px) scale(.9);
+
+      /* Responsive letter width and height */
       width: min(94vw, 400px);
-      max-height: min(76vh, 640px);
+      height: min(76vh, 640px);
+      max-height: calc(100vh - 100px);
+
       overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+
       background: var(--paper);
       border: 1px solid var(--paper-edge);
       border-radius: 6px;
@@ -614,6 +782,7 @@
       transition: opacity .55s ease .2s, transform .55s cubic-bezier(.34, 1.2, .4, 1) .2s;
       z-index: 8;
       scrollbar-width: thin;
+      box-sizing: border-box;
     }
 
     .stage.open .letter-view {
@@ -623,7 +792,9 @@
     }
 
     .letter-inner {
-      padding: 40px 34px 34px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 40px 28px 34px;
       text-align: center;
     }
 
@@ -698,11 +869,29 @@
     }
 
     .message {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
       font-family: 'Nunito', sans-serif;
-      font-size: 1.12rem;
+      font-size: 16px;
       line-height: 1.75;
       color: var(--ink-soft);
-      margin: 0 0 6px;
+      text-align: center;
+
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: normal;
+    }
+
+    .message p {
+      margin: 0 0 18px;
+    }
+
+    .message p:last-child {
+      margin-bottom: 0;
     }
 
     .message strong {
@@ -744,7 +933,9 @@
       opacity: 1;
     }
 
-    /* reserve enough room in the stage so the open letter is never clipped */
+    /* ---------- RESPONSIVE LAYOUT ---------- */
+
+    /* Reserve enough room in the stage so the open letter is never clipped */
     .stage-spacer {
       width: 1px;
       visibility: hidden;
@@ -759,7 +950,89 @@
       height: 186px;
     }
 
-    @media (max-width:380px) {
+    @media (max-width: 520px) {
+      body {
+        padding: 30px 10px 50px;
+      }
+
+      .scene {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .hint {
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+      }
+
+      .letter-view {
+        width: min(94vw, 400px);
+        height: min(76vh, 620px);
+        max-height: calc(100vh - 80px);
+      }
+
+      .letter-inner {
+        padding: 34px 22px 28px;
+      }
+
+      .eyebrow {
+        font-size: 1.1rem;
+      }
+
+      .headline {
+        font-size: clamp(2.6rem, 12vw, 3.5rem);
+        line-height: .95;
+      }
+
+      .from-line {
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+      }
+
+      .divider {
+        margin: 14px 0 18px;
+      }
+
+      .divider .line {
+        width: 35px;
+      }
+
+      .message {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .message p {
+        margin-bottom: 16px;
+      }
+
+      .flowers {
+        margin-top: 18px;
+      }
+
+      .signoff {
+        font-size: 1.2rem;
+        margin-top: 16px;
+      }
+
+      .close-hint {
+        margin-top: 24px;
+      }
+
+      .stage.open .stage-spacer {
+        height: min(76vh, 620px);
+      }
+    }
+
+    @media (max-width: 380px) {
+      body {
+        padding: 22px 8px 40px;
+      }
+
+      .hint {
+        font-size: 1.05rem;
+      }
+
       .envelope-view {
         width: 246px;
         height: 164px;
@@ -800,12 +1073,47 @@
         width: 172px;
       }
 
-      .headline {
-        font-size: 2.9rem;
+      .letter-view {
+        width: 94vw;
+        height: min(78vh, 570px);
+        max-height: calc(100vh - 60px);
       }
 
       .letter-inner {
-        padding: 32px 24px 28px;
+        padding: 30px 18px 24px;
+      }
+
+      .eyebrow {
+        font-size: 1rem;
+      }
+
+      .headline {
+        font-size: clamp(2.35rem, 13vw, 2.9rem);
+      }
+
+      .from-line {
+        font-size: 1.2rem;
+      }
+
+      .message {
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .message p {
+        margin-bottom: 14px;
+      }
+
+      .divider .line {
+        width: 28px;
+      }
+
+      .stage.open .stage-spacer {
+        height: min(78vh, 570px);
+      }
+
+      .stage:not(.open) .stage-spacer {
+        height: 164px;
       }
     }
 
@@ -836,48 +1144,76 @@
 
   <!-- ── Floating background petals & hearts ────────────────── -->
   <div class="floating-petals" aria-hidden="true">
-    <div class="petal p1"><svg viewBox="0 0 24 24" fill="#c98a8f"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-    <div class="petal p2"><svg viewBox="0 0 24 24" fill="#93a683"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-    <div class="petal p3"><svg viewBox="0 0 24 24" fill="#a85c63"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-    <div class="petal p4"><svg viewBox="0 0 24 24" fill="#e7c9b8"><circle cx="12" cy="12" r="8"/></svg></div>
-    <div class="petal p5"><svg viewBox="0 0 24 24" fill="#c98a8f"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-    <div class="petal p6"><svg viewBox="0 0 24 24" fill="#a85c63"><path d="M12 2L15 9L22 10L17 15L18.5 22L12 18.5L5.5 22L7 15L2 10L9 9L12 2Z"/></svg></div>
-    <div class="petal p7"><svg viewBox="0 0 24 24" fill="#93a683"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-    <div class="petal p8"><svg viewBox="0 0 24 24" fill="#c98a8f"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-    <div class="petal p9"><svg viewBox="0 0 24 24" fill="#e7c9b8"><path d="M12 2L15 9L22 10L17 15L18.5 22L12 18.5L5.5 22L7 15L2 10L9 9L12 2Z"/></svg></div>
-    <div class="petal p10"><svg viewBox="0 0 24 24" fill="#93a683"><circle cx="12" cy="12" r="7"/></svg></div>
+    <div class="petal p1"><svg viewBox="0 0 24 24" fill="#c98a8f">
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg></div>
+    <div class="petal p2"><svg viewBox="0 0 24 24" fill="#93a683">
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg></div>
+    <div class="petal p3"><svg viewBox="0 0 24 24" fill="#a85c63">
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg></div>
+    <div class="petal p4"><svg viewBox="0 0 24 24" fill="#e7c9b8">
+        <circle cx="12" cy="12" r="8" />
+      </svg></div>
+    <div class="petal p5"><svg viewBox="0 0 24 24" fill="#c98a8f">
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg></div>
+    <div class="petal p6"><svg viewBox="0 0 24 24" fill="#a85c63">
+        <path d="M12 2L15 9L22 10L17 15L18.5 22L12 18.5L5.5 22L7 15L2 10L9 9L12 2Z" />
+      </svg></div>
+    <div class="petal p7"><svg viewBox="0 0 24 24" fill="#93a683">
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg></div>
+    <div class="petal p8"><svg viewBox="0 0 24 24" fill="#c98a8f">
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg></div>
+    <div class="petal p9"><svg viewBox="0 0 24 24" fill="#e7c9b8">
+        <path d="M12 2L15 9L22 10L17 15L18.5 22L12 18.5L5.5 22L7 15L2 10L9 9L12 2Z" />
+      </svg></div>
+    <div class="petal p10"><svg viewBox="0 0 24 24" fill="#93a683">
+        <circle cx="12" cy="12" r="7" />
+      </svg></div>
   </div>
 
   <!-- ── Corner botanical SVG accents ──────────────────── -->
   <div class="corner-botanical tl" aria-hidden="true">
     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Branch -->
-      <path d="M10 190 Q40 140 80 100 Q120 58 170 20" stroke="#a85c63" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <path d="M10 190 Q40 140 80 100 Q120 58 170 20" stroke="#a85c63" stroke-width="2.5" stroke-linecap="round"
+        fill="none" />
       <!-- Leaves along branch -->
-      <ellipse cx="55" cy="138" rx="18" ry="9" fill="#93a683" transform="rotate(-35 55 138)"/>
-      <ellipse cx="95" cy="100" rx="16" ry="8" fill="#c98a8f" transform="rotate(-55 95 100)"/>
-      <ellipse cx="135" cy="62" rx="14" ry="7" fill="#93a683" transform="rotate(-65 135 62)"/>
+      <ellipse cx="55" cy="138" rx="18" ry="9" fill="#93a683" transform="rotate(-35 55 138)" />
+      <ellipse cx="95" cy="100" rx="16" ry="8" fill="#c98a8f" transform="rotate(-55 95 100)" />
+      <ellipse cx="135" cy="62" rx="14" ry="7" fill="#93a683" transform="rotate(-65 135 62)" />
       <!-- Flowers -->
-      <circle cx="58" cy="132" r="5" fill="#a85c63" opacity="0.6"/>
-      <circle cx="98" cy="94"  r="4" fill="#c98a8f" opacity="0.6"/>
-      <circle cx="138" cy="56" r="4" fill="#a85c63" opacity="0.6"/>
+      <circle cx="58" cy="132" r="5" fill="#a85c63" opacity="0.6" />
+      <circle cx="98" cy="94" r="4" fill="#c98a8f" opacity="0.6" />
+      <circle cx="138" cy="56" r="4" fill="#a85c63" opacity="0.6" />
       <!-- Small berries -->
-      <circle cx="30" cy="168" r="3" fill="#e7c9b8"/>
-      <circle cx="44" cy="152" r="2.5" fill="#c98a8f" opacity="0.5"/>
+      <circle cx="30" cy="168" r="3" fill="#e7c9b8" />
+      <circle cx="44" cy="152" r="2.5" fill="#c98a8f" opacity="0.5" />
     </svg>
   </div>
 
   <div class="corner-botanical br" aria-hidden="true">
     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 190 Q40 140 80 100 Q120 58 170 20" stroke="#93a683" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <ellipse cx="55" cy="138" rx="18" ry="9" fill="#c98a8f" transform="rotate(-35 55 138)"/>
-      <ellipse cx="95" cy="100" rx="16" ry="8" fill="#93a683" transform="rotate(-55 95 100)"/>
-      <ellipse cx="135" cy="62" rx="14" ry="7" fill="#c98a8f" transform="rotate(-65 135 62)"/>
-      <circle cx="58" cy="132" r="5" fill="#93a683" opacity="0.6"/>
-      <circle cx="98" cy="94"  r="4" fill="#a85c63" opacity="0.6"/>
-      <circle cx="138" cy="56" r="4" fill="#93a683" opacity="0.6"/>
-      <circle cx="30" cy="168" r="3" fill="#e7c9b8"/>
-      <circle cx="44" cy="152" r="2.5" fill="#93a683" opacity="0.5"/>
+      <path d="M10 190 Q40 140 80 100 Q120 58 170 20" stroke="#93a683" stroke-width="2.5" stroke-linecap="round"
+        fill="none" />
+      <ellipse cx="55" cy="138" rx="18" ry="9" fill="#c98a8f" transform="rotate(-35 55 138)" />
+      <ellipse cx="95" cy="100" rx="16" ry="8" fill="#93a683" transform="rotate(-55 95 100)" />
+      <ellipse cx="135" cy="62" rx="14" ry="7" fill="#c98a8f" transform="rotate(-65 135 62)" />
+      <circle cx="58" cy="132" r="5" fill="#93a683" opacity="0.6" />
+      <circle cx="98" cy="94" r="4" fill="#a85c63" opacity="0.6" />
+      <circle cx="138" cy="56" r="4" fill="#93a683" opacity="0.6" />
+      <circle cx="30" cy="168" r="3" fill="#e7c9b8" />
+      <circle cx="44" cy="152" r="2.5" fill="#93a683" opacity="0.5" />
     </svg>
   </div>
 
@@ -987,11 +1323,49 @@
             <span class="line right"></span>
           </div>
 
-          <p class="message">
-            Your support makes Vidyut what it is.<br>
-            Thank you for <strong>believing in us</strong>, standing with us,
-            and helping us to <strong>Be The Change</strong>.
-          </p>
+          <div class="message">
+            <p>To our dearest teachers,</p>
+
+            <p>
+              Today, we pause our usual chaos to say what we don’t say enough —
+              thank you. ❤️
+            </p>
+
+            <p>
+              Thank you for your time, patience, effort, and for always giving us
+              another chance to get things right.
+            </p>
+
+            <p>
+              You don’t just teach us lessons; you shape us into better versions
+              of ourselves. We may be chaotic, but you continue to believe in us.
+            </p>
+
+            <p>
+              Years from now, we may forget the lessons and formulas, but we’ll
+              remember the people who believed in us.
+            </p>
+
+            <p>
+              One day, when the last bell rings, we’ll leave these classrooms behind,
+              but there will always be a piece of these days — and a piece of you —
+              in our memories.
+            </p>
+
+            <p>
+              Thank you for leaving a mark that time can’t erase.
+            </p>
+
+            <p>
+              Happy Teachers’ Day to the people we’ll always be grateful we met. ❤️
+            </p>
+
+            <p>
+              With love, gratitude,<br>
+              and a little less chaos than usual,<br>
+              Your students
+            </p>
+          </div>
 
           <div class="flowers">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c98a8f" stroke-width="1.4">
