@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO & Open Graph ──────────────────────────────── -->
+  <title>Happy Teacher's Day 💗 | Team Vidyut</title>
+  <meta name="description" content="A little gratitude for the teachers who shape us — from Team Vidyut with love." />
+  <meta name="theme-color" content="#c0405a" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Happy Teacher's Day 💗" />
+  <meta property="og:description" content="A little gratitude for the teachers who shape us" />
+  <meta property="og:locale" content="en_IN" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Happy Teacher's Day 💗" />
+  <meta name="twitter:description" content="A little gratitude for the teachers who shape us — from Team Vidyut" />
+
+  <!-- ── Google Fonts ─────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── Fixed background ──────────────────────────────── -->
+  <div id="bg-layer" aria-hidden="true"></div>
+
+  <!-- ── Floating petals (JS-injected SVG) ─────────────── -->
+  <div id="petal-canvas" aria-hidden="true"></div>
+
+  <!-- ── Confetti layer ────────────────────────────────── -->
+  <div id="confetti-container" aria-hidden="true"></div>
+
+  <!-- ── Floating hearts ───────────────────────────────── -->
+  <div id="hearts-container" aria-hidden="true"></div>
+
+  <!-- ── Main content ──────────────────────────────────── -->
+  <main>
+    <article class="card" role="main">
+
+      <!-- Top decorative hibiscus SVG row -->
+      <div class="card-deco-top" aria-hidden="true">
+        <!-- Hibiscus left -->
+        <svg width="36" height="36" viewBox="-18 -18 36 36" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.75">
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(0)" />
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(72)" />
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(144)" />
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(216)" />
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(288)" />
+            <circle cx="0" cy="0" r="4.5" fill="#f0c86a" />
+          </g>
+        </svg>
+        <!-- Star / sparkle centre -->
+        <svg width="22" height="22" viewBox="-11 -11 22 22" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,-9 L2,-2 L9,0 L2,2 L0,9 L-2,2 L-9,0 L-2,-2 Z" fill="#d4a046" opacity="0.85" />
+        </svg>
+        <!-- Hibiscus right -->
+        <svg width="36" height="36" viewBox="-18 -18 36 36" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.75">
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(0)" />
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(72)" />
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(144)" />
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#e8849a" transform="rotate(216)" />
+            <ellipse cx="0" cy="-11" rx="5" ry="10" fill="#c0405a" transform="rotate(288)" />
+            <circle cx="0" cy="0" r="4.5" fill="#f0c86a" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Kicker -->
+      <p class="tagline">With Love &amp; Gratitude ✦ 2026</p>
+
+      <!-- Gratitude message -->
+      <p class="main-message">
+        Your support makes Vidyut what it is.<br />
+        Thank you for <em>believing in us</em>, standing with us,<br />
+        and helping us to <em>Be The Change.</em>
+      </p>
+
+      <!-- Gold divider -->
+      <div class="divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-gem"></span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- Pulsing big heart -->
+      <div class="heart-wrapper" title="Click me!">
+        <span class="big-heart" role="img" aria-label="Heart">❤️</span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="headline">
+        Happy <span class="accent">Teacher's</span> Day
+      </h1>
+
+      <!-- Sub-headline: script font -->
+      <h2 class="sub-headline">From Team Vidyut 🌺</h2>
+
+      <!-- From line -->
+      <p class="from-text">— with all our hearts —</p>
+
+      <!-- CTA Button -->
+      <button id="btn-say-thanks" class="btn-thanks" type="button" aria-label="Send a burst of love">
+        Thank You 💗
+      </button>
+
+
+
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
